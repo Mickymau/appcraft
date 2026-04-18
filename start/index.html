@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapytaj bezpłatnie — AppCraft</title>
+  <meta name="description" content="Prototyp aplikacji dla Twojego biznesu w 48h. Bezpłatna rozmowa, zero zobowiązań. Potem decydujesz.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://appcraftstudio.pl/start/">
+  <meta property="og:title" content="AppCraft — Zapytaj bezpłatnie">
+  <meta property="og:description" content="Prototyp w 48h. Bez abonamentu. Potem decydujesz.">
+  <meta property="og:url" content="https://appcraftstudio.pl/start/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .lp-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .lp-header {
+      padding: 24px 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .lp-logo {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: var(--white);
+    }
+    .lp-logo-sep { color: var(--accent); margin: 0 2px; }
+    .lp-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 64px 0;
+    }
+    .lp-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+    }
+    .lp-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--accent);
+      border: 0.5px solid var(--accent-border);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .lp-h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      margin-bottom: 20px;
+    }
+    .lp-h1 em { color: var(--accent); font-style: normal; }
+    .lp-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .lp-sub strong { color: #999; font-weight: 500; }
+    .lp-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .lp-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .lp-step__num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 0.5px solid var(--accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .lp-step__text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .lp-step__text strong { color: var(--text-primary); font-weight: 500; }
+    .lp-stats {
+      display: flex;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 0.5px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .lp-stat { display: flex; flex-direction: column; gap: 3px; }
+    .lp-stat__val { font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: -.03em; }
+    .lp-stat__label { font-size: 11px; color: var(--text-faint); }
+
+    /* Form card */
+    .lp-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 40px 36px;
+    }
+    .lp-card__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -.02em;
+      margin-bottom: 8px;
+    }
+    .lp-card__sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .lp-form { display: flex; flex-direction: column; gap: 14px; }
+    .lp-field { display: flex; flex-direction: column; gap: 6px; }
+    .lp-label { font-size: 12px; color: var(--text-muted); letter-spacing: .02em; }
+    .lp-input, .lp-textarea {
+      background: rgba(255,255,255,0.04);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 14px;
+      color: var(--white);
+      font-family: var(--font);
+      transition: border-color 0.2s;
+      outline: none;
+      width: 100%;
+    }
+    .lp-input::placeholder, .lp-textarea::placeholder { color: var(--text-faint); }
+    .lp-input:focus, .lp-textarea:focus { border-color: var(--accent-border); }
+    .lp-textarea { resize: vertical; min-height: 90px; }
+    .lp-submit {
+      background: var(--accent);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-top: 4px;
+    }
+    .lp-submit:hover { opacity: .88; transform: translateY(-1px); }
+    .lp-micro {
+      font-size: 12px;
+      color: var(--text-faint);
+      text-align: center;
+      margin-top: 4px;
+    }
+    .lp-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 4px 0;
+    }
+    .lp-divider::before, .lp-divider::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+    }
+    .lp-divider span { font-size: 11px; color: var(--text-faint); }
+    .lp-messenger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0.5px solid var(--accent-border);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: var(--radius-md);
+      transition: background 0.2s;
+    }
+    .lp-messenger:hover { background: var(--accent-dim); }
+
+    .lp-footer {
+      padding: 20px 0;
+      border-top: 0.5px solid var(--border);
+      text-align: center;
+    }
+    .lp-footer a { font-size: 12px; color: var(--text-faint); }
+    .lp-footer a:hover { color: var(--text-muted); }
+
+    /* Obiekcje */
+    .lp-objections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .lp-obj {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+    }
+    .lp-obj__q { font-size: 12px; color: var(--text-faint); margin-bottom: 5px; }
+    .lp-obj__a { font-size: 13px; color: var(--text-primary); font-weight: 500; line-height: 1.4; }
+
+    @media (max-width: 860px) {
+      .lp-inner { grid-template-columns: 1fr; gap: 48px; }
+      .lp-objections { grid-template-columns: 1fr; }
+      .lp-card { padding: 28px 22px; }
+    }
+    @media (max-width: 480px) {
+      .lp-h1 { letter-spacing: -.02em; }
+      .lp-stats { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lp-wrap">
+
+    <!-- Header — tylko logo, bez nawigacji -->
+    <header class="lp-header">
+      <div class="container">
+        <a href="/" class="lp-logo" aria-label="AppCraft — strona główna">
+          APP<span class="lp-logo-sep">|</span>CRAFT
+        </a>
+      </div>
+    </header>
+
+    <main class="lp-main" id="main">
+      <div class="container">
+        <div class="lp-inner">
+
+          <!-- Lewa kolumna — copy -->
+          <div>
+            <div class="lp-tag">
+              <span style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0"></span>
+              Aplikacje szyte na miarę
+            </div>
+            <h1 class="lp-h1">
+              Twój biznes<br>
+              nie jest za mały<br>
+              na <em>własne narzędzie.</em>
+            </h1>
+            <p class="lp-sub">
+              Większość myśli że to koszt fortuny i miesięcy czekania.<br>
+              <strong>Efekt widzisz w 48h</strong> — potem decydujesz. Zero ryzyka.
+            </p>
+
+            <div class="lp-steps">
+              <div class="lp-step">
+                <div class="lp-step__num">1</div>
+                <div class="lp-step__text"><strong>Bezpłatna rozmowa</strong> — pytam o Twój biznes, nie o wymagania techniczne</div>
+              </div>
+              <div class="lp-step">
+                <div class="lp-step__num">2</div>
+                <div class="lp-step__text"><strong>Prototyp w 48h</strong> — widzisz działające narzędzie następnego dnia</div>
+              </div>
+              <div class="lp-step">
+                <div class="lp-step__num">3</div>
+                <div class="lp-step__text"><strong>Ty decydujesz</strong> — zero ryzyka, płacisz tylko jeśli chcesz wdrożyć</div>
+              </div>
+            </div>
+
+            <div class="lp-stats">
+              <div class="lp-stat">
+                <span class="lp-stat__val">48h</span>
+                <span class="lp-stat__label">Pierwszy prototyp</span>
+              </div>
+              <div style="width:0.5px;background:var(--border);align-self:center;height:28px"></div>
+              <div class="lp-stat">
+                <span class="lp-stat__val">0 zł</span>
+                <span class="lp-stat__label">Abonament miesięczny</span>
+              </div>
+              <div style="width:0.5px;background:var(--border);align-self:center;height:28px"></div>
+              <div class="lp-stat">
+                <span class="lp-stat__val">8 lat</span>
+                <span class="lp-stat__label">W branży IT</span>
+              </div>
+            </div>
+
+            <!-- Obiekcje -->
+            <div class="lp-objections">
+              <div class="lp-obj">
+                <div class="lp-obj__q">"To będzie kosztować 10 000 zł"</div>
+                <div class="lp-obj__a">Efekt widzisz w 48h — za darmo. Koszt ustalamy dopiero potem.</div>
+              </div>
+              <div class="lp-obj">
+                <div class="lp-obj__q">"To zajmie miesiące"</div>
+                <div class="lp-obj__a">Prototyp następnego dnia. Wdrożenie w tydzień.</div>
+              </div>
+              <div class="lp-obj">
+                <div class="lp-obj__q">"Nie wiem czego chcę"</div>
+                <div class="lp-obj__a">Pytam o marzenia, nie o wymagania. Reszta to moja robota.</div>
+              </div>
+              <div class="lp-obj">
+                <div class="lp-obj__q">"To nie dla mojej branży"</div>
+                <div class="lp-obj__a">Gabinet, architekt, dentysta — zrobiłem już dla każdego z nich.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prawa kolumna — formularz -->
+          <div>
+            <div class="lp-card">
+              <div class="lp-card__title">Powiedz mi o swoim problemie.</div>
+              <div class="lp-card__sub">Bezpłatna rozmowa. Zero zobowiązań.<br>Odpisuję w ciągu kilku godzin.</div>
+
+              <!-- Messenger jako główny CTA -->
+              <a href="https://m.me/PLACEHOLDER" class="lp-messenger" rel="noopener" style="display:flex;margin-bottom:16px;">
+                Napisz do mnie na Messengerze →
+              </a>
+
+              <div class="lp-divider"><span>lub zostaw dane</span></div>
+
+              <!-- Formularz fallback -->
+              <form class="lp-form" name="kontakt" action="/dziekujemy/" method="POST">
+                <div class="lp-field">
+                  <label class="lp-label" for="imie">Imię</label>
+                  <input class="lp-input" type="text" id="imie" name="imie" placeholder="Jak mam się do Ciebie zwracać?" required autocomplete="given-name">
+                </div>
+                <div class="lp-field">
+                  <label class="lp-label" for="kontakt-input">Telefon lub email</label>
+                  <input class="lp-input" type="text" id="kontakt-input" name="kontakt" placeholder="Jak się z Tobą skontaktować?" required autocomplete="email">
+                </div>
+                <div class="lp-field">
+                  <label class="lp-label" for="problem">Co chciałbyś usprawnić w swoim biznesie?</label>
+                  <textarea class="lp-textarea" id="problem" name="problem" placeholder="Opisz w kilku zdaniach — nie musisz wiedzieć jak to zrobić technicznie"></textarea>
+                </div>
+                <button type="submit" class="lp-submit">Wyślij i czekaj na kontakt →</button>
+                <p class="lp-micro">Twoje dane są bezpieczne. Nie spamujemy.</p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="lp-footer">
+      <div class="container">
+        <a href="/">← Wróć do portfolio AppCraft</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

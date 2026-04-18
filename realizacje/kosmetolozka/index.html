@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabinet kosmetyczny — Zamiast segregatora, aplikacja | AppCraft</title>
+  <meta name="description" content="Jak zbudowałem aplikację dla gabinetu kosmetycznego która zastąpiła kartki, segregatory i drogie subskrypcje.">
+  <link rel="canonical" href="https://appcraftstudio.pl/realizacje/kosmetolozka/">
+  <meta property="og:title" content="Gabinet kosmetyczny — AppCraft">
+  <meta property="og:description" content="Zamiast segregatora — aplikacja. Dokumenty, zdjęcia przed/po i wizyty w jednym miejscu.">
+  <meta property="og:url" content="https://appcraftstudio.pl/realizacje/kosmetolozka/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .case-hero { padding: 140px 0 80px; }
+    .case-hero__back { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; transition: color 0.2s; }
+    .case-hero__back:hover { color: var(--text-primary); }
+    .case-hero__tag { display: inline-block; font-size: 11px; color: var(--accent); border: 0.5px solid var(--accent-border); padding: 4px 12px; border-radius: 20px; margin-bottom: 20px; letter-spacing: .05em; text-transform: uppercase; }
+    .case-hero__h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -.03em; max-width: 640px; margin-bottom: 20px; }
+    .case-hero__sub { font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 560px; margin-bottom: 40px; }
+    .case-meta { display: flex; flex-wrap: wrap; gap: 32px; padding: 28px 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); margin-bottom: 64px; }
+    .case-meta__item { display: flex; flex-direction: column; gap: 4px; }
+    .case-meta__label { font-size: 11px; color: var(--text-faint); letter-spacing: .04em; text-transform: uppercase; }
+    .case-meta__value { font-size: 15px; color: var(--text-primary); font-weight: 500; }
+    .case-screen { width: 100%; aspect-ratio: 16/9; background: var(--bg-card); border: 0.5px solid var(--border-card); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin-bottom: 64px; overflow: hidden; }
+    .case-screen__placeholder { font-size: 13px; color: var(--text-faint); letter-spacing: .04em; }
+    .case-body { max-width: 680px; }
+    .case-body h2 { font-size: 22px; font-weight: 700; color: var(--white); letter-spacing: -.02em; margin: 40px 0 12px; }
+    .case-body p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 16px; }
+    .case-body blockquote { border-left: 2px solid var(--accent); padding: 16px 20px; margin: 32px 0; background: var(--accent-dim); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .case-body blockquote p { color: var(--text-primary); font-style: italic; margin: 0; }
+    .case-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 0; border-top: 0.5px solid var(--border); flex-wrap: wrap; gap: 16px; }
+    .case-nav a { font-size: 14px; color: var(--text-muted); transition: color 0.2s; }
+    .case-nav a:hover { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+
+  <header class="nav scrolled" id="nav" role="banner">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="AppCraft — strona główna">APP<span class="nav__logo-sep">|</span>CRAFT</a>
+        <nav aria-label="Nawigacja główna">
+          <ul class="nav__links">
+            <li><a href="/#realizacje" class="nav__link">Realizacje</a></li>
+            <li><a href="/#o-mnie" class="nav__link">O mnie</a></li>
+            <li><a href="/#kontakt" class="nav__link">Kontakt</a></li>
+          </ul>
+        </nav>
+        <a href="https://m.me/PLACEHOLDER" class="nav__cta desktop" rel="noopener">Zapytaj bezpłatnie →</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="nav__mobile" id="mobile-menu" aria-label="Menu mobilne">
+        <a href="/#realizacje" class="nav__mobile-link">Realizacje</a>
+        <a href="/#o-mnie" class="nav__mobile-link">O mnie</a>
+        <a href="/#kontakt" class="nav__mobile-link">Kontakt</a>
+        <a href="https://m.me/PLACEHOLDER" class="nav__mobile-cta" rel="noopener">Zapytaj bezpłatnie →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <a href="/" class="case-hero__back">← Wszystkie realizacje</a>
+        <div class="case-hero__tag">Gabinet kosmetyczny</div>
+        <h1 class="case-hero__h1">Zamiast segregatora — aplikacja</h1>
+        <p class="case-hero__sub">Dokumenty, zdjęcia przed/po i wizyty w jednym miejscu. Koniec z kartkami, Excelem i drogimi subskrypcjami.</p>
+
+        <div class="case-meta">
+          <div class="case-meta__item">
+            <span class="case-meta__label">Branża</span>
+            <span class="case-meta__value">Gabinet kosmetyczny</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Czas realizacji</span>
+            <span class="case-meta__value">48h (prototyp)</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Typ projektu</span>
+            <span class="case-meta__value">Aplikacja webowa PWA</span>
+          </div>
+          <div class="case-meta__item">
+            <span class="case-meta__label">Abonament</span>
+            <span class="case-meta__value">Brak</span>
+          </div>
+        </div>
+
+        <!-- Podmień na screenshoty aplikacji -->
+        <div class="case-screen">
+          <span class="case-screen__placeholder">[ Screenshot aplikacji — dodaj plik do /assets/ ]</span>
+        </div>
+
+        <div class="case-body">
+          <h2>Problem</h2>
+          <p>Właścicielka gabinetu kosmetycznego żyła z chaosem: kartki z podpisami klientów, zdjęcia przed/po porozrzucane między telefonem a komputerem, drogie subskrypcje (~100 zł/msc) na narzędzia które i tak nie współpracowały ze sobą.</p>
+
+          <h2>Rozwiązanie</h2>
+          <p>Powiedziała mi o problemie przy okazji rozmowy. Następnego dnia wieczorem miała działający prototyp — jedną aplikację która zastąpiła wszystko. Kartoteka klientki, zdjęcia przed/po, historia wizyt, podpisy cyfrowe w jednym miejscu.</p>
+
+          <blockquote>
+            <p>"Powiedziała mi o problemie. Następnego dnia miała prototyp."</p>
+          </blockquote>
+
+          <h2>Efekt</h2>
+          <p>Zero zbędnych subskrypcji. Wszystko dostępne z telefonu i komputera. Aplikacja działa offline jako PWA — działa nawet bez internetu.</p>
+        </div>
+
+        <div class="case-nav">
+          <a href="/">← Wszystkie realizacje</a>
+          <a href="/realizacje/architekt/">Następna realizacja →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">APP<span style="color:var(--accent)">|</span>CRAFT</span>
+        <span class="footer__copy">© 2025 AppCraft Studio.</span>
+        <nav class="footer__links" aria-label="Linki w stopce">
+          <a href="mailto:hello@appcraftstudio.pl" class="footer__link">hello@appcraftstudio.pl</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>

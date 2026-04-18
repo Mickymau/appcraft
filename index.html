@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>AppCraft — Aplikacje szyte na miarę dla małych firm</title>
+  <meta name="description" content="Buduję aplikacje dla małych firm które mają dość bałaganu. Prototyp w 48h, bez abonamentu, bez agencji. Zapytaj bezpłatnie.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://appcraftstudio.pl/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://appcraftstudio.pl/">
+  <meta property="og:title" content="AppCraft — Aplikacje szyte na miarę dla małych firm">
+  <meta property="og:description" content="Zamiast pięciu subskrypcji — jedno narzędzie. Prototyp w 48h, bez abonamentu.">
+  <meta property="og:image" content="https://appcraftstudio.pl/assets/og-image.jpg">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="AppCraft">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AppCraft — Aplikacje szyte na miarę dla małych firm">
+  <meta name="twitter:description" content="Zamiast pięciu subskrypcji — jedno narzędzie. Prototyp w 48h.">
+  <meta name="twitter:image" content="https://appcraftstudio.pl/assets/og-image.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Michał",
+    "url": "https://appcraftstudio.pl",
+    "jobTitle": "Developer aplikacji na zamówienie",
+    "description": "Buduję aplikacje dla małych firm. 8 lat doświadczenia w IT.",
+    "knowsAbout": ["Tworzenie aplikacji webowych", "Automatyzacja procesów", "Analiza biznesowa"],
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AppCraft",
+    "url": "https://appcraftstudio.pl"
+  }
+  </script>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container">
+      <div class="nav__inner">
+
+        <a href="/" class="nav__logo" aria-label="AppCraft — strona główna">
+          APP<span class="nav__logo-sep">|</span>CRAFT
+        </a>
+
+        <nav aria-label="Nawigacja główna">
+          <ul class="nav__links">
+            <li><a href="#realizacje" class="nav__link">Realizacje</a></li>
+            <li><a href="#o-mnie" class="nav__link">O mnie</a></li>
+            <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <a href="https://m.me/PLACEHOLDER" class="nav__cta desktop" rel="noopener">
+          Zapytaj bezpłatnie →
+        </a>
+
+        <button class="nav__hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+
+      <!-- Mobile menu -->
+      <nav class="nav__mobile" id="mobile-menu" aria-label="Menu mobilne">
+        <a href="#realizacje" class="nav__mobile-link">Realizacje</a>
+        <a href="#o-mnie" class="nav__mobile-link">O mnie</a>
+        <a href="#kontakt" class="nav__mobile-link">Kontakt</a>
+        <a href="https://m.me/PLACEHOLDER" class="nav__mobile-cta" rel="noopener">Zapytaj bezpłatnie →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__inner">
+
+          <div class="hero__tag" aria-hidden="true">
+            <span class="hero__tag-dot"></span>
+            Aplikacje szyte na miarę
+          </div>
+
+          <h1 class="hero__h1" id="hero-heading">
+            Zamiast pięciu<br>
+            subskrypcji —<br>
+            <em>jedno narzędzie.</em>
+          </h1>
+
+          <p class="hero__sub">
+            Buduję aplikacje dla małych firm które mają dość bałaganu.<br>
+            <strong>Prototyp w 48h.</strong> Potem decydujesz.
+          </p>
+
+          <div class="hero__actions">
+            <a href="https://m.me/PLACEHOLDER" class="btn-primary" rel="noopener">
+              Zapytaj bezpłatnie →
+            </a>
+            <a href="#realizacje" class="btn-secondary">
+              Zobacz realizacje <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <div class="hero__stats" aria-label="Kluczowe liczby">
+            <div class="stat">
+              <span class="stat__value" data-flip="48h">48h</span>
+              <span class="stat__label">Pierwszy prototyp</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__value" data-flip="3">3</span>
+              <span class="stat__label">Zadowolone firmy</span>
+            </div>
+            <div class="stat-sep" aria-hidden="true"></div>
+            <div class="stat">
+              <span class="stat__value" data-flip="8">8 lat</span>
+              <span class="stat__label">W branży IT</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REALIZACJE ===================== -->
+    <section class="projects" id="realizacje" aria-labelledby="realizacje-heading">
+      <div class="container">
+        <h2 class="sr-only" id="realizacje-heading">Realizacje</h2>
+        <div class="projects__grid">
+
+          <!-- Karta 1 -->
+          <a class="proj-card" href="/realizacje/kosmetolozka/" aria-label="Realizacja: gabinet kosmetyczny">
+            <div class="proj-card__screen mock-kosmetolozka" aria-hidden="true">
+              <div class="m-nav">
+                <div class="m-dot" style="background:#ff5f57"></div>
+                <div class="m-dot" style="background:#febc2e"></div>
+                <div class="m-dot" style="background:#28c840"></div>
+              </div>
+              <div class="m-body">
+                <div class="m-row"></div>
+                <div class="m-row s"></div>
+                <div class="m-cards">
+                  <div class="m-card"></div>
+                  <div class="m-card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="proj-card__info">
+              <div class="proj-card__tag">Gabinet kosmetyczny</div>
+              <div class="proj-card__name">Zamiast segregatora — aplikacja</div>
+              <div class="proj-card__desc">Dokumenty, zdjęcia przed/po i wizyty w jednym miejscu</div>
+              <span class="proj-card__arrow">Zobacz realizację →</span>
+            </div>
+          </a>
+
+          <!-- Karta 2 -->
+          <a class="proj-card" href="/realizacje/architekt/" aria-label="Realizacja: studio architektoniczne">
+            <div class="proj-card__screen mock-architekt" aria-hidden="true">
+              <div class="m-header">
+                <div class="m-avatar"></div>
+                <div style="height:6px;width:56px;background:#1d9e75;border-radius:3px;opacity:.4"></div>
+              </div>
+              <div class="m-lines">
+                <div class="m-line"></div>
+                <div class="m-line m"></div>
+                <div class="m-line s"></div>
+              </div>
+              <div class="m-grid">
+                <div class="m-cell"></div>
+                <div class="m-cell"></div>
+                <div class="m-cell"></div>
+              </div>
+            </div>
+            <div class="proj-card__info">
+              <div class="proj-card__tag">Studio architektoniczne</div>
+              <div class="proj-card__name">Koniec z Excelem, Drivem i notatnikami — jedna aplikacja</div>
+              <div class="proj-card__desc">Maile, pliki i projekty w jednym miejscu zamiast czterech narzędzi</div>
+              <span class="proj-card__arrow">Zobacz realizację →</span>
+            </div>
+          </a>
+
+          <!-- Karta 3 -->
+          <a class="proj-card" href="/realizacje/medi-dent/" aria-label="Realizacja: gabinet dentystyczny Medi-Dent">
+            <div class="proj-card__screen mock-medident" aria-hidden="true">
+              <div class="m-top">
+                <span class="m-logo-sm">MEDI-DENT</span>
+                <div class="m-nav-dots">
+                  <div class="m-nav-dot"></div>
+                  <div class="m-nav-dot"></div>
+                  <div class="m-nav-dot"></div>
+                </div>
+              </div>
+              <div class="m-hero">
+                <div class="m-h"></div>
+                <div class="m-h sm"></div>
+                <div class="m-btn-sm"></div>
+              </div>
+              <div class="m-img"></div>
+            </div>
+            <div class="proj-card__info">
+              <div class="proj-card__tag">Gabinet dentystyczny</div>
+              <div class="proj-card__name">Strona, która pracuje dla właściciela</div>
+              <div class="proj-card__desc">Nowoczesna strona z rezerwacją i treściami SEO</div>
+              <span class="proj-card__arrow">Zobacz realizację →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== O MNIE ===================== -->
+    <section class="about" id="o-mnie" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__inner">
+
+          <div class="about__content reveal">
+            <div class="about__label">O mnie</div>
+            <h2 class="about__h2" id="about-heading">
+              8 lat w IT.<br>Teraz buduję<br>narzędzia dla Ciebie.
+            </h2>
+            <p class="about__text">
+              Przez 8 lat pracowałem jako analityk systemów i tester aplikacji w bankowości i lotnictwie. Wiem jak działają aplikacje od środka — co je psuje i co sprawia że działają świetnie.
+            </p>
+            <p class="about__text">
+              Teraz to doświadczenie przekuwam w konkretne narzędzia dla małych firm. Nie sprzedaję technologii — rozwiązuję problemy. Pytam o marzenia, nie o wymagania techniczne.
+            </p>
+            <div class="about__chips">
+              <span class="chip">Analiza systemów</span>
+              <span class="chip">Testowanie aplikacji</span>
+              <span class="chip">Automatyzacja procesów</span>
+              <span class="chip">React / Node.js</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">Make.com</span>
+            </div>
+          </div>
+
+          <div class="about__photo reveal">
+            <!-- Podmień src na swoje zdjęcie -->
+            <span class="about__photo-placeholder">[ Twoje zdjęcie ]</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAKT ===================== -->
+    <section class="about" id="kontakt" aria-labelledby="kontakt-heading" style="border-top: 0.5px solid var(--border); padding: 80px 0;">
+      <div class="container">
+        <div style="max-width: 560px; margin: 0 auto; text-align: center;" class="reveal">
+          <div class="about__label">Kontakt</div>
+          <h2 class="about__h2" id="kontakt-heading" style="margin-bottom: 16px;">
+            Powiedz mi o swoim<br>problemie.
+          </h2>
+          <p class="about__text" style="margin-bottom: 32px;">
+            Bezpłatna rozmowa. Zero zobowiązań.<br>Odpisuję w ciągu kilku godzin.
+          </p>
+          <a href="https://m.me/PLACEHOLDER" class="btn-primary" style="display: inline-flex;" rel="noopener">
+            Napisz do mnie na Messengerze →
+          </a>
+          <p style="margin-top: 16px; font-size: 13px; color: var(--text-faint);">
+            Lub napisz na: <a href="mailto:hello@appcraftstudio.pl" style="color: var(--accent);">hello@appcraftstudio.pl</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">APP<span style="color:var(--accent)">|</span>CRAFT</span>
+        <span class="footer__copy">© 2025 AppCraft Studio. Wszelkie prawa zastrzeżone.</span>
+        <nav class="footer__links" aria-label="Linki w stopce">
+          <a href="/start/" class="footer__link">Landing page</a>
+          <a href="mailto:hello@appcraftstudio.pl" class="footer__link">hello@appcraftstudio.pl</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
