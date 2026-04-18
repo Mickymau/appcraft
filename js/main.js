@@ -58,12 +58,14 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => {
+  // Kart procesu nie inicjalizuj tutaj — obsługuje je processObserver
+  if (el.classList.contains('process-card')) return;
   el.style.opacity = '0';
   el.style.transform = 'translateY(28px)';
   revealObserver.observe(el);
 });
 
-// --- Staggered reveal pro karty realizacji ---
+// --- Staggered reveal dla kart realizacji ---
 const cardObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -78,6 +80,35 @@ const cardObserver = new IntersectionObserver((entries) => {
 
 const grid = document.querySelector('.projects__grid');
 if (grid) cardObserver.observe(grid);
+
+// --- Staggered reveal dla kart procesu ---
+const processObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const cards = entry.target.querySelectorAll('.process-card');
+      cards.forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(24px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.2s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 100);
+      });
+      processObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+const processGrid = document.querySelector('.process__grid');
+if (processGrid) {
+  // Ustaw startowy stan przed animacją
+  processGrid.querySelectorAll('.process-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(24px)';
+  });
+  processObserver.observe(processGrid);
+}
 
 // --- Flip animation na statystykach ---
 function flipStat(el) {

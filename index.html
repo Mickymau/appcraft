@@ -73,6 +73,7 @@
         <nav aria-label="Nawigacja główna">
           <ul class="nav__links">
             <li><a href="#realizacje" class="nav__link">Realizacje</a></li>
+            <li><a href="#jak-dzialamy" class="nav__link">Jak działamy</a></li>
             <li><a href="#o-mnie" class="nav__link">O mnie</a></li>
             <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
           </ul>
@@ -91,6 +92,7 @@
       <!-- Mobile menu -->
       <nav class="nav__mobile" id="mobile-menu" aria-label="Menu mobilne">
         <a href="#realizacje" class="nav__mobile-link">Realizacje</a>
+        <a href="#jak-dzialamy" class="nav__mobile-link">Jak działamy</a>
         <a href="#o-mnie" class="nav__mobile-link">O mnie</a>
         <a href="#kontakt" class="nav__mobile-link">Kontakt</a>
         <a href="https://m.me/PLACEHOLDER" class="nav__mobile-cta" rel="noopener">Zapytaj bezpłatnie →</a>
@@ -158,8 +160,7 @@
         <h2 class="sr-only" id="realizacje-heading">Realizacje</h2>
         <div class="projects__grid">
 
-          <!-- Karta 1 -->
-          <a class="proj-card" href="/realizacje/kosmetolozka/" aria-label="Realizacja: gabinet kosmetyczny">
+          <a class="proj-card" href="https://beautiflow-beta.vercel.app/" target="_blank" rel="noopener" aria-label="Realizacja: gabinet kosmetyczny">
             <div class="proj-card__screen mock-kosmetolozka" aria-hidden="true">
               <div class="m-nav">
                 <div class="m-dot" style="background:#ff5f57"></div>
@@ -183,8 +184,7 @@
             </div>
           </a>
 
-          <!-- Karta 2 -->
-          <a class="proj-card" href="/realizacje/architekt/" aria-label="Realizacja: studio architektoniczne">
+          <a class="proj-card" href="https://archiflow-three.vercel.app/" target="_blank" rel="noopener" aria-label="Realizacja: studio architektoniczne">
             <div class="proj-card__screen mock-architekt" aria-hidden="true">
               <div class="m-header">
                 <div class="m-avatar"></div>
@@ -209,8 +209,7 @@
             </div>
           </a>
 
-          <!-- Karta 3 -->
-          <a class="proj-card" href="/realizacje/medi-dent/" aria-label="Realizacja: gabinet dentystyczny Medi-Dent">
+          <a class="proj-card" href="https://mickymau.github.io/medi-dent/" target="_blank" rel="noopener" aria-label="Realizacja: gabinet dentystyczny Medi-Dent">
             <div class="proj-card__screen mock-medident" aria-hidden="true">
               <div class="m-top">
                 <span class="m-logo-sm">MEDI-DENT</span>
@@ -236,6 +235,78 @@
           </a>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCES ===================== -->
+    <section class="process" id="jak-dzialamy" aria-labelledby="process-heading">
+      <div class="container">
+
+        <div class="process__header reveal">
+          <div class="about__label">Jak współpracujemy</div>
+          <h2 class="process__h2" id="process-heading">Prosto i bez zaskoczeń.</h2>
+          <p class="process__sub">Od pierwszej wiadomości do gotowego rozwiązania — 4 kroki.</p>
+        </div>
+
+        <div class="process__steps">
+
+          <!-- KROK 1 -->
+          <div class="process-step reveal">
+            <div class="process-step__dot-col">
+              <div class="process-step__dot" aria-hidden="true">1</div>
+              <div class="process-step__line" aria-hidden="true"></div>
+            </div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Opisujesz mi problem</h3>
+              <p class="process-step__desc">WhatsApp, Messenger lub formularz</p>
+            </div>
+          </div>
+
+          <!-- KROK 2 -->
+          <div class="process-step reveal">
+            <div class="process-step__dot-col">
+              <div class="process-step__dot" aria-hidden="true">2</div>
+              <div class="process-step__line" aria-hidden="true"></div>
+            </div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Prototyp w 48h — za darmo</h3>
+              <p class="process-step__desc">Widzisz aplikację zanim zapłacisz</p>
+              <span class="process-step__badge">Bezpłatnie</span>
+            </div>
+          </div>
+
+          <!-- KROK 3 -->
+          <div class="process-step reveal">
+            <div class="process-step__dot-col">
+              <div class="process-step__dot" aria-hidden="true">3</div>
+              <div class="process-step__line" aria-hidden="true"></div>
+            </div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Ustalamy szczegóły</h3>
+              <p class="process-step__desc">Omawiamy zakres, spisuję wymagania</p>
+            </div>
+          </div>
+
+          <!-- KROK 4 -->
+          <div class="process-step reveal">
+            <div class="process-step__dot-col">
+              <div class="process-step__dot" aria-hidden="true">4</div>
+              <div class="process-step__line" aria-hidden="true"></div>
+            </div>
+            <div class="process-step__body">
+              <h3 class="process-step__title">Gotowa aplikacja</h3>
+              <p class="process-step__desc">Poprawki aż do skutku</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="process__cta reveal">
+          <a href="https://m.me/PLACEHOLDER" class="btn-primary" rel="noopener">
+            Zacznij bezpłatnie →
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -266,7 +337,6 @@
           </div>
 
           <div class="about__photo reveal">
-            <!-- Podmień src na swoje zdjęcie -->
             <span class="about__photo-placeholder">[ Twoje zdjęcie ]</span>
           </div>
 
