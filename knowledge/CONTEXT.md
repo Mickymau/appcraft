@@ -12,7 +12,7 @@ Buduje markę osobistą jako twórca aplikacji na zamówienie dla małych firm.
 
 Domena: `appcraftstudio.pl` (zarejestrowana, jeszcze niepodpięta)
 Email: `hello@appcraftstudio.pl`
-Folder lokalny: `C:\Users\Admin\Desktop\PROJEKTY\CraftApp\`
+Folder lokalny: `C:\Users\Admin\Desktop\PROJEKTY\AppCraft\`
 
 Strona NIE jest one-page — ma osobne podstrony per realizacja.
 
