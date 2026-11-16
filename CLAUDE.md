@@ -38,3 +38,15 @@ Błąd w ścieżce = strona bez stylów.
 | Stack, struktura plików, CSS, JS, deployment | `knowledge/ARCHITECTURE.md` |
 | Pułapki, ścieżki relatywne, konwencje | `knowledge/PATTERNS.md` |
 | Co blokuje deploy, co do zrobienia | `knowledge/OPEN-ITEMS.md` |
+
+---
+
+## Wiedza ogólna (BRAIN)
+
+Dobre praktyki spoza tego repo: `C:/Users/Admin/Desktop/PROJEKTY/ObsidianVault/moj_system/BRAIN/`
+- strony (struktura, teksty, design, SEO, testy): `wiedza/strony/_indeks.md`
+- marketing: `wiedza/marketing/_indeks.md`
+- praca z AI: `wiedza/ai/_indeks.md`
+- audyt strony: `playbooki/audyt-strony.md`
+
+Czytaj indeks, potem jedną kartę — tylko gdy zadanie tego wymaga. Lekcję przydatną poza projektem zaproponuj do dopisania w BRAIN.
